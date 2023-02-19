@@ -11,31 +11,27 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        int[][] firstMatrix = new int[n][m];
-        int[][] secondMatrix = new int[n][m];
+        int[][] matrix = new int[n][m];
 
         for(int i=0; i<n; i++) {
             st = new StringTokenizer(bf.readLine());
             for(int j=0; j<m; j++) {
-                firstMatrix[i][j] = Integer.parseInt(st.nextToken());
+                matrix[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
         for(int i=0; i<n; i++) {
             st = new StringTokenizer(bf.readLine());
             for(int j=0; j<m; j++) {
-                secondMatrix[i][j] = Integer.parseInt(st.nextToken());
+                matrix[i][j] += Integer.parseInt(st.nextToken());
             }
         }
 
-        int[][] resultMatrix = new int[n][m];
         for(int i=0; i<n; i++) {
             for(int j=0; j<m; j++) {
-                resultMatrix[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
-                System.out.print(resultMatrix[i][j] + " ");
+                System.out.print(matrix[i][j] + " ");
             }
-            System.out.print('\n');
+            System.out.println();
         }
-
     }
 }
